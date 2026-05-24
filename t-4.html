@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Розгалужений обчислювальний процес</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h3>Розрахунок функції H(x) для варіанту 13</h3>
+    
+    <script type="text/javascript">
+        // Запит меж і кроку зміни аргументу через prompt (зі стандартними значеннями)
+        var startX = parseFloat(prompt("Введіть початкове значення x:", "-6"));
+        var endX = parseFloat(prompt("Введіть кінцеве значення x:", "6"));
+        var step = parseFloat(prompt("Введіть крок зміни x:", "2"));
+
+        // Перевірка на те, чи користувач ввів саме числа
+        if (isNaN(startX) || isNaN(endX) || isNaN(step) || step <= 0) {
+            document.write("<p>Помилка: введено некоректні дані або крок менший чи дорівнює нулю.</p>");
+        } else {
+            // Формування "шапки" таблиці результатів
+            document.write("<table border='1' cellpadding='5' cellspacing='0'>");
+            document.write("<tr><th>Значення x</th><th>Значення функції H(x)</th></tr>");
+
+            // Цикл для проходження по всім значенням x від startX до endX
+            for (var x = startX; x <= endX; x += step) {
+                var h;
+                
+                // Округлення x до 4 знаків, щоб уникнути багів дробів у JS (наприклад, 4.000000001)
+                var currentX = Math.round(x * 10000) / 10000;
+
+                // Розгалужений процес обчислення згідно з формулою
+                if (currentX < 4) {
+                    h = Math.abs(Math.sin(currentX));
+                } else if (currentX === 4) {
+                    h = currentX - 1;
+                } else { 
+                    // currentX > 4
+                    h = Math.tan(currentX) + 1;
+                }
+
+                // Виведення поточного рядка таблиці (результат функції округлюємо до 4 знаків)
+                document.write("<tr>");
+                document.write("<td align='center'>" + currentX + "</td>");
+                document.write("<td align='center'>" + h.toFixed(4) + "</td>");
+                document.write("</tr>");
+            }
+            
+            document.write("</table>");
+        }
+    </script>
+</body>
+</html>

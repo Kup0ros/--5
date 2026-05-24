@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Візитні картки</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript" language="javascript">
+
+        var name = prompt('Input name', 'Арсеній Матвійчук');
+        var position = prompt('Input position', 'Software Developer');
+        var phone = prompt('Input phone', '+380-97-000-00-00');
+
+        // Формування однієї візитної картки
+        var visitcard = '<table width="100%" border="0">'
+            + '<tr>'
+            + '<td align="center" valign="middle">'
+            + '<img src="images/visit_card.gif" alt="Логотип" width = "250 px">'
+            + '</td>'
+            + '<td align="center">'
+            + '<b>' + name + '</b><br>'
+            + '<i>' + position + '</i><br>'
+            + '<font color="blue">' + phone + '</font>'
+            + '</td>'
+            + '</tr>'
+            + '</table>';
+
+        document.write('<table width="100%" border="0" align="center">');
+        for(var y = 0; y < 12; y++) {
+            document.write('<tr>');
+            for(var x = 0; x < 3; x++) {
+                document.write('<td align="center" style="border-style: dashed; border-width:thin;">');
+                document.write(visitcard);
+                document.write('</td>');
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+</body>
+</html>

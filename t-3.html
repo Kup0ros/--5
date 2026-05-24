@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Математичні функції й константи</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        // Виведення констант
+        document.write('<h3>КОНСТАНТИ</h3>');
+        document.write('Значення константи e = ' + Math.E + '<br>');
+        document.write('Значення константи &pi; = ' + Math.PI + '<br>');
+        document.write('Десятковий логарифм постійної Ейлера (e) = ' + Math.LOG10E + '<br>');
+        document.write('Двійковий логарифм постійної Ейлера (e) = ' + Math.LOG2E + '<br>');
+        document.write('Натуральний логарифм числа 10 = ' + Math.LN10 + '<br>');
+        document.write('Натуральний логарифм числа 2 = ' + Math.LN2 + '<br>');
+        document.write('Корінь квадратний із двох = ' + Math.SQRT2 + '<br>');
+        document.write('Корінь квадратний з однієї другої = ' + Math.SQRT1_2 + '<br>');
+
+        // Виведення результатів математичних функцій
+        document.write('<h3>ФУНКЦІЇ</h3>');
+        document.write('Результат зведення в ступінь: 4<sup>2</sup> = ' + Math.pow(4, 2) + '<br>');
+        document.write('Результат добування квадратного кореня з 4: y = ' + Math.sqrt(4) + '<br>');
+        document.write('Результат добування квадратного кореня з -9: y = ' + Math.sqrt(-9) + '<br>');
+        document.write('Результат обчислення абсолютного значення -9: y = ' + Math.abs(-9) + '<br>');
+        document.write('Результат обчислення косинуса нуля радіан: y = ' + Math.cos(0) + '<br>');
+        document.write('Косинус 180 градусів (&pi; радіан): y = ' + Math.cos(Math.PI) + '<br>');
+        document.write('Результат обчислення арккосинуса нуля: y = ' + Math.acos(0) + '<br>');
+        document.write('Результат обчислення синуса нуля радіан: y = ' + Math.sin(0) + '<br>');
+        document.write('Синус 90 градусів (&pi;/2 радіан): y = ' + Math.sin(Math.PI / 2) + '<br>');
+        document.write('Результат обчислення арксинуса одиниці: y = ' + Math.asin(1) + '<br>');
+        document.write('Тангенс 45 градусів (&pi;/4 радіан): y = ' + Math.tan(Math.PI / 4) + '<br>');
+        document.write('Результат обчислення арктангенса одиниці: y = ' + Math.atan(1) + '<br>');
+        document.write('Результат зведення e в ступінь 2: y = ' + Math.exp(2) + '<br>');
+        document.write('Натуральний логарифм від e<sup>2</sup>: y = ' + Math.log(Math.exp(2)) + '<br>');
+        document.write('Результат обчислення десяткового логарифма від числа 100: y = ' + Math.log10(100) + '<br>');
+        document.write('Результат обчислення двійкового логарифма від числа 8: y = ' + Math.log2(8) + '<br>');
+        document.write('Тангенс 45 градусів (з округленням): y = ' + Math.round(Math.tan(Math.PI / 4)) + '<br>');
+        document.write('Результат округлення числа 1.00123 у більшу сторону: y = ' + Math.ceil(1.00123) + '<br>');
+        document.write('Результат округлення числа -3.1234 у більшу сторону: y = ' + Math.ceil(-3.1234) + '<br>');
+        document.write('Результат округлення числа 1.00123 у меншу сторону: y = ' + Math.floor(1.00123) + '<br>');
+        
+        // У методичці тут була помилка (написано y=4), але скрипт виведе правильне математичне значення: -4
+        document.write('Результат округлення числа -3.1234 у меншу сторону: y = ' + Math.floor(-3.1234) + '<br>'); 
+        
+        document.write('Результат округлення числа 1.44 за правилами арифметики: y = ' + Math.round(1.44) + '<br>');
+        document.write('Результат округлення числа 1.54 за правилами арифметики: y = ' + Math.round(1.54) + '<br>');
+        document.write('Вибір найбільшого із двох чисел 4 й 2: y = ' + Math.max(4, 2) + '<br>');
+        document.write('Вибір найменшого із двох чисел 4 й 2: y = ' + Math.min(4, 2) + '<br>');
+
+        // Випадкове число
+        document.write('<h3>ГЕНЕРАТОР ВИПАДКОВИХ ЧИСЕЛ</h3>');
+        document.write('Формування випадкових чисел в інтервалі [0;1]: y = ' + Math.random() + '<br>');
+    </script>
+</body>
+</html>
